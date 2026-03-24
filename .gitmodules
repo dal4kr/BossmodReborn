@@ -1,3 +1,4 @@
 [submodule "FFXIVClientStructs"]
 	path = FFXIVClientStructs
-	url = https://github.com/aers/FFXIVClientStructs
+	url = https://github.com/dal4kr/FFXIVClientStructs
+	branch = kr
