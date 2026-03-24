@@ -2,7 +2,7 @@ name: Build
 on:
   pull_request:
     branches:
-      - main
+      - kr
 jobs:
   Build:
     runs-on: windows-latest
@@ -19,8 +19,8 @@ jobs:
 
       - name: Download Dalamud Latest
         run: |
-          Invoke-WebRequest -Uri https://goatcorp.github.io/dalamud-distrib/latest.zip -OutFile latest.zip
-          Expand-Archive -Force latest.zip -DestinationPath "$env:AppData\XIVLauncher\addon\Hooks\dev"
+          Invoke-WebRequest -Uri https://raw.githubusercontent.com/dal4kr/Dalamud.Resources/main/Dalamud/Release/latest.zip -OutFile latest.zip
+          Expand-Archive -Force latest.zip -DestinationPath "$env:AppData\XIVLauncherKR\addon\Hooks\dev"
 
       - name: Restore NuGet Packages
         run: dotnet restore     BossMod/BossModReborn.csproj
